@@ -1,4 +1,4 @@
-# ColSoc Issues Tracker 🪲
+# ColSoc Issues Tracker
 
 Welcome to the ColSoc Issues Tracker! This repository serves as a centralized, collaborative hub for discussing taxonomy and identification issues for Coleoptera in the UK.
 
