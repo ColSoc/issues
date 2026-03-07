@@ -1,22 +1,13 @@
 ---
-name: 🌟 New Species Log
-about: Propose a newly discovered/described beetle species
+name: 🌟 New Species
+about: Propose a species name that needs adding
 title: "[New Species]: "
 labels: 'new species'
 assignees: ''
 ---
 
-### Proposed or Assigned Taxon
-*Family, Genus, and Species name (if already named).*
-
-
-### Holotype / Specimen Location
-*Where is the physical type specimen housed? (e.g., Natural History Museum, London; personal collection; pending deposit)*
-
-
-### Distinguishing Characteristics
-*What primary traits separate this from the most closely related species?*
-
+### Taxon
+*Family, Genus, and Species name. Make sure to include the authorship.*
 
 ### Publication Status
 - [ ] Undescribed / Work in progress
