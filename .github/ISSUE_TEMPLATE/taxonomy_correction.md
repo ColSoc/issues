@@ -1,14 +1,13 @@
 ---
 name: 📚 Taxonomy Correction
-about: Suggest a correction or update to existing beetle taxonomy
-title: "[Taxonomy Update]: "
+about: Suggest a correction or update to the taxonomy
+title: "[Taxonomy Correction]: "
 labels: 'taxonomy, review needed'
 assignees: ''
 ---
 
-### Current Taxon / Name
+### Taxon Affected
 *What is the currently listed name, rank, or classification that needs updating?*
-
 
 ### Proposed Change
 *What should it be changed to? (e.g., synonymization with another species, elevation to full species, genus reassignment)*
