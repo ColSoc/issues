@@ -1,12 +1,12 @@
 ---
-name: 🌟 New Species
-about: Propose a species name that needs adding
-title: "[New Species]: "
-labels: 'new species'
+name: 🌟 New Taxon Name
+about: Propose a taxon name that needs adding
+title: "[New Taxon Name]: "
+labels: 'new taxon name'
 assignees: ''
 ---
 
-### Taxon
+### Taxon Name
 *Family, Genus, and Species name. Make sure to include the authorship.*
 
 ### Publication Status
