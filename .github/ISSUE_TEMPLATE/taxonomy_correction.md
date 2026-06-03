@@ -13,10 +13,13 @@ assignees: ''
 ### Proposed Change
 *What should it be changed to? (e.g., synonymization with another species, elevation to full species, genus reassignment)*
 
+### References
+*Add any references, links to preprints, published papers, or zoological database entries or select from the below*
 
-### Rationale & Evidence
-*Why is this change necessary? Please provide a brief morphological or genetic explanation.*
+- [ ] Duff, A. 2018. Checklist of the Beetles of the British Isles. Third Edition. Iver. Pemberley Books (Publishing).
+- [ ] Duff, A. 2012. Beetles of Britain and Ireland Volume 1: Sphaeriusidae to Silphidae. West Runton. A. G. Duff (Publishing).
+- [ ] Duff, A. 2024. Beetles of Britain and Ireland Volume 2: Staphylinidae. West Runton. A. G. Duff (Publishing).
+- [ ] Duff, A. 2020. Beetles of Britain and Ireland Volume 3: Geotrupidae to Scraptiidae. West Runton. A. G. Duff (Publishing).
+- [ ] Duff, A. 20160. Beetles of Britain and Ireland Volume 4: Cerambycidae to Curculionidae. West Runton. A. G. Duff (Publishing).
 
-
-### Supporting Literature
-*Please link or cite the peer-reviewed papers, taxonomic catalogs, or other scientific literature that supports this change.*
+### Additional Comments
