@@ -21,6 +21,6 @@ assignees: ''
 - [ ] Duff, A. 2012. Beetles of Britain and Ireland Volume 1: Sphaeriusidae to Silphidae. West Runton. A. G. Duff (Publishing).
 - [ ] Duff, A. 2024. Beetles of Britain and Ireland Volume 2: Staphylinidae. West Runton. A. G. Duff (Publishing).
 - [ ] Duff, A. 2020. Beetles of Britain and Ireland Volume 3: Geotrupidae to Scraptiidae. West Runton. A. G. Duff (Publishing).
-- [ ] - [ ] Duff, A. 20160. Beetles of Britain and Ireland Volume 4: Cerambycidae to Curculionidae. West Runton. A. G. Duff (Publishing).
+- [ ] Duff, A. 20160. Beetles of Britain and Ireland Volume 4: Cerambycidae to Curculionidae. West Runton. A. G. Duff (Publishing).
 
 ### Additional Comments
