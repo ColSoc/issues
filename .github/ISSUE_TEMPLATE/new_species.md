@@ -15,4 +15,6 @@ assignees: ''
 - [ ] Published (Please provide citation below)
 
 ### References / Links
-*Add any links to preprints, published papers, or zoological database entries (e.g., ZooBank).*
+*Add any links to preprints, published papers, or zoological database entries*
+
+### Additional Comments
