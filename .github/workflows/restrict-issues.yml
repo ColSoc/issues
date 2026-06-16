@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 jobs:
-  enforce-admin-only:
+  enforce-role-only:
     runs-on: ubuntu-latest
     steps:
       - name: Check User Permissions
@@ -20,16 +20,20 @@ jobs:
                 repo: context.repo.repo,
                 username: username
               });
-              // Valid permissions: 'admin', 'write', 'read', 'none'
-              const isAdmin = permission.permission === 'admin';
-              core.setOutput('is_admin', isAdmin);
+              
+              // Valid permissions: 'admin', 'maintain', 'write', 'read', 'none'
+              // Check if the user's permission level is one of the allowed roles
+              const allowedRoles = ['admin', 'maintain', 'write'];
+              const isAuthorized = allowedRoles.includes(permission.permission);
+              
+              core.setOutput('is_authorized', isAuthorized);
             } catch (error) {
-              // If the user isn't even a collaborator, the API throws an error or returns 'none'
-              core.setOutput('is_admin', false);
+              // If the user isn't even a collaborator, the API throws an error
+              core.setOutput('is_authorized', false);
             }
 
       - name: Close and Redirect Issue
-        if: steps.check_auth.outputs.is_admin == 'false'
+        if: steps.check_auth.outputs.is_authorized == 'false'
         uses: actions/github-script@v7
         with:
           script: |
@@ -40,7 +44,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issueNumber,
-              body: `👋 Hi @${context.payload.issue.user.login}! Issue creation is restricted to administrators. Please move this over to our **Discussions** tab so the community can help you!`
+              body: `👋 Hi @${context.payload.issue.user.login}! Issue creation is restricted to maintainers and administrators. Please move this over to our **Discussions** tab so the community can help you!`
             });
 
             // 2. Close the issue
