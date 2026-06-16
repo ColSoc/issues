@@ -1,0 +1,61 @@
+name: Restrict Issue Creation
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  enforce-admin-only:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check User Permissions
+        id: check_auth
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const username = context.payload.issue.user.login;
+            try {
+              const { data: permission } = await github.rest.repos.getCollaboratorPermissionLevel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                username: username
+              });
+              // Valid permissions: 'admin', 'write', 'read', 'none'
+              const isAdmin = permission.permission === 'admin';
+              core.setOutput('is_admin', isAdmin);
+            } catch (error) {
+              // If the user isn't even a collaborator, the API throws an error or returns 'none'
+              core.setOutput('is_admin', false);
+            }
+
+      - name: Close and Redirect Issue
+        if: steps.check_auth.outputs.is_admin == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = context.issue.number;
+            
+            // 1. Post a redirection comment
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: `👋 Hi @${context.payload.issue.user.login}! Issue creation is restricted to administrators. Please move this over to our **Discussions** tab so the community can help you!`
+            });
+
+            // 2. Close the issue
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              state: 'closed',
+              state_reason: 'not_planned'
+            });
+
+            // 3. Lock the issue to prevent further spam
+            await github.rest.issues.lock({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              lock_reason: 'resolved'
+            });
