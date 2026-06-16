@@ -1,4 +1,4 @@
-Welcome to the ColSocs repository for tracking, auditing, and maintaining the taxonomic checklist of British Coleoptera. 
+Welcome to ColSoc's repository for tracking, auditing, and maintaining the taxonomic checklist of British Coleoptera. 
 
 The goal of this project is to enable the UK Species Inventory to be a reliable, up-to-date ledger of UK beetle species, accommodating new discoveries, dynamic name changes and synonymies
 
